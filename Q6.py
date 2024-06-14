@@ -1,12 +1,16 @@
-string = "PQRQRQRQ"
-substring = "PQR"
-string_len = len(string)
-substring_len = len(substring)
+"""
+Occurance of substring in the given string.
+"""
+
+STRING = "PQRQRQRQ"
+SUBSTRING = "PQR"
+STRING_LEN = len(STRING)
+SUBSTRING_LEN = len(SUBSTRING)
 j = 0
-count = 0
-while(j < string_len):
-    if(string[j] == substring[0]):
-        if(string[j:j+substring_len] == substring):
-            count += 1
+COUNT = 0
+while j < STRING_LEN:
+    if STRING[j] == SUBSTRING[0]:
+        if STRING[j : j + SUBSTRING_LEN] == SUBSTRING:
+            COUNT += 1
     j += 1
-print(count)
+print(COUNT)
