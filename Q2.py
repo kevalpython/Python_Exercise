@@ -1,26 +1,44 @@
-names = ['Smith', 'Johnson', 'Williams', 'Jones', 'Brown', 'Davis', 'Miller', 'Wilson',
-         'Moore', 'Taylor', 'Anderson', 'Thomas', 'Jackson', 'White']
+"""
+three most frequent and three least frequent names
+"""
 
-name_lengths = {}
-for name in names:
+NAMES = [
+    "Smith",
+    "Johnson",
+    "Williams",
+    "Jones",
+    "Brown",
+    "Davis",
+    "Miller",
+    "Wilson",
+    "Moore",
+    "Taylor",
+    "Anderson",
+    "Thomas",
+    "Jackson",
+    "White",
+]
+
+NAME_LENGTH = {}
+for name in NAMES:
     length = len(name)
-    if length in name_lengths:
-        name_lengths[length].append(name)
+    if length in NAME_LENGTH:
+        NAME_LENGTH[length].append(name)
     else:
-        name_lengths[length] = [name]
+        NAME_LENGTH[length] = [name]
 
-sorted_lengths = sorted(name_lengths.items())
-names_length=[]
-for name in names:
-    names_length.append(len(name))
-    
-print("Names:", name_lengths)
-print("Name lengths:", names_length)
+SORTED_LENGTHS = sorted(NAME_LENGTH.items())
+NAMES_LENGTH = []
+for name in NAMES:
+    NAMES_LENGTH.append(len(name))
+
+print("Names:", NAME_LENGTH)
+print("Name lengths:", NAMES_LENGTH)
 
 print("The three most frequent name lengths are:")
-for length, names_list in sorted_lengths[0:3]:
-    print(f"{len(names_list)} names of length {length}: {names_list}")
-    
+for length, names_list in SORTED_LENGTHS[0:3]:
+    print(f"{len(names_list)} NAMES of length {length}: {names_list}")
+
 print("The three least frequent name lengths are:")
-for length, names_list in sorted_lengths[-3:]:
-    print(f"{len(names_list)} names of length {length}: {names_list}")
+for length, names_list in SORTED_LENGTHS[-3:]:
+    print(f"{len(names_list)} NAMES of length {length}: {names_list}")
