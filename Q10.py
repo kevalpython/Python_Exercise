@@ -1,68 +1,71 @@
-# 1
-n = 3
+"""
+Pattern Programming
+"""
 
-for i in range(1, n + 1):
-    print("*" * (n - i), end="")
+# 1
+NUMBER = 3
+
+for i in range(1, NUMBER + 1):
+    print("*" * (NUMBER - i), end="")
     for k in range(1, i * 2):
         print(" ", end="")
-    print("*" * (n - i), end="")
+    print("*" * (NUMBER - i), end="")
     print()
 
-for i in range(n - 1, 0, -1):
-    print("*" * (n - i), end="")
+for i in range(NUMBER - 1, 0, -1):
+    print("*" * (NUMBER - i), end="")
     for k in range(1, i * 2):
         print(" ", end="")
-    print("*" * (n - i), end="")
+    print("*" * (NUMBER - i), end="")
     print()
 
 # 2
-n = 3
+NUMBER2 = 3
 
-for i in range(1, n + 1):
-    print(" " * (n - i), end="")
+for i in range(1, NUMBER2 + 1):
+    print(" " * (NUMBER2 - i), end="")
     for k in range(1, i * 2):
         print("*", end="")
     print()
 
-for i in range(n - 1, 0, -1):
-    print(" " * (n - i), end="")
+for i in range(NUMBER2 - 1, 0, -1):
+    print(" " * (NUMBER2 - i), end="")
     for k in range(1, i * 2):
         print("*", end="")
     print()
 
 # 3
-n = 5
+NUMBER3 = 5
 
-for i in range(1, n+1):
-    counter = 0
+for i in range(1, NUMBER3 + 1):
+    COUNTER = 0
     for j in range(i):
-        if j == 0 or j == i-1:
-            print("*", end='')
-            counter += 1
+        if j in (0, i - 1):
+            print("*", end="")
+            COUNTER += 1
+        elif i == NUMBER3:
+            print("*", end="")
+            COUNTER += 1
         else:
-            if i != n:
-                print(' ', end='')
-            else:
-                print("*", end='')
-                counter += 1
+            print(" ", end="")
     print()
- 
-# 4
-n = 5 
 
-for i in range(1, n + 1):
-    for j in range(1, n + 1):
-        if i == 1 or i == n or j == 1 or j == n:
+# 4
+NUMBER4 = 5
+
+for i in range(1, NUMBER4 + 1):
+    for j in range(1, NUMBER4 + 1):
+        if i == 1 or i == NUMBER4 or j == 1 or j == NUMBER4:
             print("*", end=" ")
         else:
             print(" ", end=" ")
     print()
 
 # 5
-n = 5
-num = 1
-for i in range(0, n):
-    for j in range(0, i+1):
-        print(num, end=" ")
-        num += 1
+NUMBER5 = 5
+NUM = 1
+for i in range(0, NUMBER5):
+    for j in range(0, i + 1):
+        print(NUM, end=" ")
+        NUM += 1
     print()
